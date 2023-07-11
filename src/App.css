@@ -87,14 +87,12 @@
 .sudokuComp{
     width: 100%;
     padding: 20px;
-    display: grid;
+    display: flex;
     justify-content: center;
-    grid-template-columns: repeat(2,500px);
+    gap: 10px;
+
 }
 
-.sudokuTable{
-    width: 100%;
-}
 .sudokuTable table{
     border: 2px solid black;
     border-collapse: collapse;
@@ -188,11 +186,8 @@
        font-weight: bold;
     }
     .sudokuComp {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
         flex-direction: column;
+        align-items: center;
     }
     .sudokuTable table td {
         width: 30px;
