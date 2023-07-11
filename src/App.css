@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+.startGame{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.startGame h1{
+    color: white;
+    margin-bottom: 100px;
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.startGame button:hover{
+    font-size: 20px;
+    background-color: grey;
+    color: black;
+}
+.startGame button{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.editGameDiv{
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.editGameDiv button{
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+.startNewGameButt{
+    background-color: green;
+}
+.resetGameButt{
+    background-color: red;
+}
+.startNewGameButt:hover{
+    background-color: darkgreen;
+    font-size: 18px;
+}
+.resetGameButt:hover{
+    background-color: darkred;
+    font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.header{
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius:20px ;
+}
+.header a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.header a:hover{
+    color: silver;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sudokuComp{
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,500px);
 }
 
-.App-link {
-  color: #61dafb;
+.sudokuTable{
+    width: 100%;
+}
+.sudokuTable table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.sudokuTable table td{
+    border: 1px solid silver;
+    background-color: white;
+    width: 48px;
+    height: 48px;
+    font-weight: bold;
+}
+.sudokuTable table td:hover{
+    background-color: silver;
+    color: black;
+}
+.sudokuTable table td:focus{
+    background-color: silver;
+    color: black;
+}
+.sudokuTable table  tr:nth-child(3),
+.sudokuTable table  tr:nth-child(6){
+    border-bottom: 2px solid black;
+}
+.sudokuTable table td:nth-child(3),
+.sudokuTable table td:nth-child(6){
+    border-right: 2px solid black;
+}
+.sudokuTable table td.nonEmpty{
+    background-color: #59007f;
+    color: white;
+    font-weight: bold;
+}
+.sudokuTable table td.error{
+    background-color: red;
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.buttonBox{
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(3,50px);
+    grid-template-rows: repeat(4,50px);
+}
+.buttonBox button{
+    border: 1px solid black;
+    background-color: gainsboro;
+    color: #59007f;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 1px;
+}
+.buttonBox button:nth-child(10){
+    width: 150px;
+    background-color: #8500be;
+    color: white;
+}
+
+.buttonBox button:hover{
+    background-color: silver;
+    color: #8500be;
+    font-size: 20px;
+}
+
+
+.aboutDiv{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.aboutDiv table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.aboutDiv table td{
+    border: 1px solid silver;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width:600px){
+    .startGame h1{
+       font-size: 30px;
+       font-weight: bold;
+    }
+    .sudokuComp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .sudokuTable table td {
+        width: 30px;
+        height: 30px;
+    }
+    .editGameDiv {
+        height: 60px;
+        padding: 10px;
+    }
+    .editGameDiv button {
+        width: 100px;
+    }
 }
