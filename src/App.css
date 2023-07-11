@@ -89,8 +89,7 @@
     padding: 20px;
     display: flex;
     justify-content: center;
-    gap: 10px;
-
+    gap: 10px; 
 }
 
 .sudokuTable table{
